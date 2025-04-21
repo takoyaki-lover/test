@@ -143,6 +143,17 @@ function modalClose() {
     move.style.margin = localStorage.modal_margin;
 }
 
+setInterval(function () {
+    document.getElementById('screen-width').textContent = screen.width;
+    document.getElementById('screen-height').textContent = screen.height;
+    document.getElementById('outer-width').textContent = window.outerWidth;
+    document.getElementById('outer-height').textContent = window.outerHeight;
+    document.getElementById('inner-width').textContent = window.innerWidth;
+    document.getElementById('inner-height').textContent = window.innerHeight;
+    document.getElementById('client-width').textContent = document.documentElement.clientWidth;
+    document.getElementById('client-height').textContent = document.documentElement.clientHeight;
+}, 10);
+
 // ------------------------------------------------------------
 // BatteryManager オブジェクトを取得する
 // ------------------------------------------------------------
@@ -192,14 +203,4 @@ if (navigator.getBattery()) {
     );
 }
 
-setInterval(function () {
-    document.getElementById('screen-width').textContent = screen.width;
-    document.getElementById('screen-height').textContent = screen.height;
-    document.getElementById('outer-width').textContent = window.outerWidth;
-    document.getElementById('outer-height').textContent = window.outerHeight;
-    document.getElementById('inner-width').textContent = window.innerWidth;
-    document.getElementById('inner-height').textContent = window.innerHeight;
-    document.getElementById('client-width').textContent = document.documentElement.clientWidth;
-    document.getElementById('client-height').textContent = document.documentElement.clientHeight;
-}, 10);
 
