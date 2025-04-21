@@ -147,47 +147,51 @@ function modalClose() {
 // BatteryManager オブジェクトを取得する
 // ------------------------------------------------------------
 // 取得を開始する
-var promise = navigator.getBattery();
+document.getElementById('battery').textContent = Boolean(navigator.getBattery());
+if (navigator.getBattery()) {
+    var promise = navigator.getBattery();
 
-// 結果を受け取る（非同期）
-promise.then(
-
-    // ------------------------------------------------------------
-    // 成功時に実行されるコールバック関数
-    // ------------------------------------------------------------
-    function success(battery_manager) {
-        // 出力テスト
-        console.log(battery_manager);
-        // ------------------------------------------------------------
-        // 充電中であるか
-        // ------------------------------------------------------------
-        console.log(battery_manager.charging);
+    // 結果を受け取る（非同期）
+    promise.then(
 
         // ------------------------------------------------------------
-        // 満充電までに必要な時間（秒）
+        // 成功時に実行されるコールバック関数
         // ------------------------------------------------------------
-        console.log(battery_manager.chargingTime);
+        function success(battery_manager) {
+            // 出力テスト
+            console.log(battery_manager);
+            // ------------------------------------------------------------
+            // 充電中であるか
+            // ------------------------------------------------------------
+            console.log(battery_manager.charging);
+
+            // ------------------------------------------------------------
+            // 満充電までに必要な時間（秒）
+            // ------------------------------------------------------------
+            console.log(battery_manager.chargingTime);
+
+            // ------------------------------------------------------------
+            // 枯渇するまでの残り時間（秒）
+            // ------------------------------------------------------------
+            console.log(battery_manager.dischargingTime);
+
+            // ------------------------------------------------------------
+            // バッテリーの貯蓄率（0.0 ～ 1.0）
+            // ------------------------------------------------------------
+            console.log(battery_manager.level);
+
+        },
 
         // ------------------------------------------------------------
-        // 枯渇するまでの残り時間（秒）
+        // 失敗時に実行されるコールバック関数
         // ------------------------------------------------------------
-        console.log(battery_manager.dischargingTime);
+        function failure(reason) {
+            // 出力テスト
+            console.log(reason);
+        }
+    );
+}
 
-        // ------------------------------------------------------------
-        // バッテリーの貯蓄率（0.0 ～ 1.0）
-        // ------------------------------------------------------------
-        console.log(battery_manager.level);
-
-    },
-
-    // ------------------------------------------------------------
-    // 失敗時に実行されるコールバック関数
-    // ------------------------------------------------------------
-    function failure(reason) {
-        // 出力テスト
-        console.log(reason);
-    }
-);
 setInterval(function () {
     document.getElementById('screen-width').textContent = screen.width;
     document.getElementById('screen-height').textContent = screen.height;
@@ -197,6 +201,5 @@ setInterval(function () {
     document.getElementById('inner-height').textContent = window.innerHeight;
     document.getElementById('client-width').textContent = document.documentElement.clientWidth;
     document.getElementById('client-height').textContent = document.documentElement.clientHeight;
-
 }, 10);
 
