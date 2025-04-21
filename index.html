@@ -16,8 +16,8 @@
         <option value="dark">Dark</option>
     </select>
     </div>
-    <p style="margin: 5px 0 0 0;">UserAgent: <span id="userAgent"></span><button id="copy-ua" style="font-size: 14px; margin: 0 0 0 4px; vertical-align: middle;">Copy</button></p>
-    <p style="margin: 5px 0 0 0;">window: <span id="window"></span></p>
+    <p>UserAgent: <span id="userAgent"></span><button id="copy-ua" style="font-size: 14px; margin: 0 0 0 4px; vertical-align: middle;">Copy</button></p>
+    <p>window: <span id="window"></span></p>
 
     <input class="input" type="button" value="button">
 
@@ -57,10 +57,6 @@
         </div>
     </fieldset>
 
-    <div>
-        <p class="test">0123456789</p>
-        <p class="test2">1111111111</p>
-    </div>
     <button id="refresh">refresh</button>
     <p>screen width: <span id="screen-width"></span></p>
     <p>screen height: <span id="screen-height"></span></p>
@@ -71,9 +67,12 @@
     <p>client width: <span id="client-width"></span></p>
     <p>client height: <span id="client-height"></span></p>
 
-    <div class="right">
-        <button>right</button>
+    <p>navigator.getBattery() = <span id="battery"></span></p>
+
+    <div class="block-right">
+        <p>block right</p>
     </div>
+    <p class="inline-right">inline right</p>
     <button id="summon">summon</button>
 
     <p>box x: <span id="box-x"></span></p>
