@@ -159,6 +159,7 @@ setInterval(function () {
 // ------------------------------------------------------------
 // 取得を開始する
 document.getElementById('battery').textContent = Boolean(navigator.getBattery());
+/*
 if (navigator.getBattery()) {
     var promise = navigator.getBattery();
 
@@ -203,4 +204,4 @@ if (navigator.getBattery()) {
     );
 }
 
-
+*/
