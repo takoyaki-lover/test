@@ -191,3 +191,13 @@ if (navigator.getBattery()) {
     });
 }
 
+var request = new XMLHttpRequest();
+request.open('HEAD', window.location.href, true);
+request.send();
+request.onreadystatechange = function () {
+    if (this.readyState === 4) {
+        var serverDate = new Date(request.getResponseHeader('Date'));
+        console.log(serverDate);
+        // 例) => Wed Feb 16 2017 12:00:00 GMT+0900
+    }
+}
