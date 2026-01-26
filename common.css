@@ -190,14 +190,14 @@ header {
 }
 
 .header-left {
-    align-content: center;
+    display: flex;
 }
 
 .header-title {
     text-decoration: none;
-    display: inline-block;
+    display: block;
     color: white;
-    margin: 0 0 0 calc(var(--hamburger-menu-width) + var(--hamburger-header-title-gap));
+    margin: auto 0 auto calc(var(--hamburger-menu-width) + var(--hamburger-header-title-gap));
 }
 
 .header-title:hover {
