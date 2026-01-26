@@ -197,7 +197,15 @@ request.send();
 request.onreadystatechange = function () {
     if (this.readyState === 4) {
         var serverDate = new Date(request.getResponseHeader('Date'));
-        console.log(serverDate);
+        console.log('serverDate = ' + serverDate);
+        console.log('unixtime = ' + serverDate.getTime());
+        console.log('year = ' + serverDate.getFullYear());
+        console.log('month = ' + (serverDate.getMonth() + 1));
+        console.log('date = ' + serverDate.getDate());
+        console.log('day = ' + serverDate.getDay());
+        console.log('hours = ' + serverDate.getHours());
+        console.log('minutes = ' + serverDate.getMinutes());
+        console.log('seconds = ' + serverDate.getSeconds());
         // 例) => Wed Feb 16 2017 12:00:00 GMT+0900
     }
 }

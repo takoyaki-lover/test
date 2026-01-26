@@ -24,6 +24,48 @@ p {
     margin: 10px 0 0 0;
 }
 
+.rainbow {
+    margin: 10px 0;
+    width: 90%;
+    height: 100px;
+    background: linear-gradient(to right,#e60000,#f39800,#fff100,#009944,#0068b7,#1d2088,#920783) 0 / 200%;
+    animation: 5s rainbow-box linear infinite;
+}
+
+@keyframes rainbow-box {
+    100% { background-position-x: 200%; }
+}
+
+.rainbow-text {
+    margin: 10px 0;
+    background: linear-gradient(to right,#e60000,#f39800,#fff100,#009944,#0068b7,#1d2088,#920783) 0 / 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 300%;
+    font-weight: bold;
+    display: inline-block;
+    animation: 5s rainbow-text linear infinite;
+}
+
+@keyframes rainbow-text {
+    100% { background-position-x: 200%; }
+}
+
+.rainbow-number {
+    margin: 30px 0;
+    background: linear-gradient(170deg,#fbf9db,#f9e3be,#c0bbbd,#9ba9b8,#9b94b1,#fbeae5,#8dbce6,#91a7c0,#cdb5bc) 0 / 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 300%;
+    font-weight: bold;
+    display: inline-block;
+    animation: 3s rainbow-num linear infinite;
+}
+
+@keyframes rainbow-num {
+    100% {background-position-x: -200%;}
+}
+
 .batsu{
     font-size: 150%;/*ボタンの大きさ*/
     font-weight: bold;

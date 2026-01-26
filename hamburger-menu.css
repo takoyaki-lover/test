@@ -1,0 +1,125 @@
+.menu-wrapper {
+    position: relative;
+}
+
+.menu-icon {
+    width: var(--hamburger-menu-width);
+    height: auto;
+    position: fixed;
+    /* ← fixedにして常に左上固定 */
+    top: 12px;
+    left: calc(var(--header-right-left-padding) + 4px);
+    cursor: pointer;
+    z-index: 3;
+    display: inline-block;
+    padding: 0;
+    border: 0;
+    background: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.menu-icon .menu-stick {
+    display: block;
+    height: 4px;
+    background: #eee;
+    border-radius: 2px;
+    transition: transform 0.4s, opacity 0.4s, background-color 0.1s;
+}
+
+.menu-icon:hover .menu-stick {
+    background-color: #e0e0e0;
+}
+
+/* ハンバーガーがXに変形 */
+#menu-toggle.opened .menu-stick:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+}
+
+#menu-toggle.opened .menu-stick:nth-child(2) {
+    opacity: 0;
+}
+
+#menu-toggle.opened .menu-stick:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+}
+
+#menu-toggle.opened .menu-stick {
+    background: #222;
+}
+
+#menu-toggle.opened:hover .menu-stick {
+    background: #444;
+}
+
+/* オーバーレイ背景 */
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.4s;
+    z-index: 1;
+}
+
+#menu-toggle.opened~.overlay {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* メニュー本体（左から出す） */
+.menu {
+    position: fixed;
+    top: 0;
+    left: calc(-1 * var(--side-menu-width) - 10px);
+    /* ← 初期位置を左へ */
+    width: var(--side-menu-width);
+    height: 100%;
+    background: #fff;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
+    transition: left 0.4s ease;
+    z-index: 2;
+}
+
+#menu-toggle.opened~.menu {
+    left: 0;
+    /* ← 開いたときは左0へ */
+}
+
+.menu-header {
+    background-color: #eee;
+    height: var(--header-height);
+    align-content: center;
+}
+
+.menu-title {
+    text-decoration: none;
+    color: black;
+    margin: 0 0 0 calc(var(--header-right-left-padding) + var(--hamburger-menu-width) + var(--hamburger-header-title-gap));
+}
+
+.menu-title:hover {
+    color: #333333;
+}
+
+.sidebar {
+    list-style: none;
+    margin: 30px 0 0 var(--side-menu-left-margin);
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #000000;
+    transition: color 0.1s;
+}
+
+.sidebar a:hover {
+    text-decoration: underline;
+    color: #007bff;
+}

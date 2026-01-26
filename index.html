@@ -4,99 +4,133 @@
     <meta charset="utf-8">
     <title>魑魅魍魎</title>
     <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./common.css">
+    <link rel="stylesheet" href="./hamburger-menu.css">
 </head>
 
 <body class="theme">
+<header>
+    <div class="header-left">
+        <div class="menu-wrapper">
 
-    <h1>魑魅魍魎</h1>
-    <div class="box">
+            <button class="menu-icon" id="menu-toggle" tabindex="0">
+                <div class="menu-stick"></div>
+                <div class="menu-stick"></div>
+                <div class="menu-stick"></div>
+            </button>
+
+            <div class="overlay" id="overlay"></div>
+
+            <nav class="menu">
+                <div class="menu-header">
+                    <a href="../home/" class="menu-title variable-tabindex level-2" tabindex="-1">学生情報データベース</a>
+                </div>
+                <ul class="sidebar" id="sidebar-urls"></ul>
+            </nav>
+        </div>
+        <a href="../home/" class="header-title level-2">学生情報データベース</a>
+    </div>
+    <a href="../login/logout.php" class="btn btn--orange btn--cubic btn--shadow level-3">ログアウト</a>
+</header>
+
+<h1>魑魅魍魎</h1>
+<div>
     <select class="theme-select" id="theme" name="select" size="1">
         <option value="system" name="System">System</option>
         <option value="light">Light</option>
         <option value="dark">Dark</option>
     </select>
+</div>
+<p>UserAgent: <span id="userAgent"></span><button id="copy-ua" style="font-size: 14px; margin: 0 0 0 4px; vertical-align: middle;">Copy</button></p>
+<p>window: <span id="window"></span></p>
+
+<input class="input" type="button" value="button">
+<div class="rainbow"></div>
+<div class="rainbow-text">あいうえおかきくけこさしすせそたちつてと</div><br>
+<div class="rainbow-number">50000</div>
+
+<p><font color="#FFAF2C">#FFAF2C</color></font></p>
+<p style="font-family: Arial">ABCDEFG12345</p>
+<p style="font-family: sans-serif">ABCDEFG12345</p>
+<p style="font-family: Meiryo">ABCDEFG12345</p>
+
+<div class="closs">
+    <div class="stick-area">
+        <div class="stick-1"></div>
+        <div class="stick-2"></div>
     </div>
-    <p>UserAgent: <span id="userAgent"></span><button id="copy-ua" style="font-size: 14px; margin: 0 0 0 4px; vertical-align: middle;">Copy</button></p>
-    <p>window: <span id="window"></span></p>
+</div>
 
-    <input class="input" type="button" value="button">
+<div class="closs-s">
+    <div class="stick-area-s">
+        <div class="stick-1-s"></div>
+        <div class="stick-2-s"></div>
+    </div>
+</div>
 
-    <div class="closs">
-        <div class="stick-area">
-            <div class="stick-1"></div>
-            <div class="stick-2"></div>
+<div class="batsu">×</div>
+
+<div class="switch-area">
+    <div class="switch-outer">
+        <div class="toggle-switch"></div>
+    </div>
+    <p>Display the advanced information</p>
+</div>
+
+<fieldset class="checkbox">
+    <legend>checkbox</legend>
+    <div>
+        <input type="checkbox" id="opt-info" name="opt-info"/>
+        <label for="opt-info">Display the advanced information</label>
+    </div>
+
+    <div>
+    <input type="checkbox" id="second" name="second"/>
+    <label for="second">Toggle time format to second</label>
+    </div>
+</fieldset>
+
+<button id="refresh">refresh</button>
+<p>screen width: <span id="screen-width"></span></p>
+<p>screen height: <span id="screen-height"></span></p>
+<p>outer width: <span id="outer-width"></span></p>
+<p>outer height: <span id="outer-height"></span></p>
+<p>inner width: <span id="inner-width"></span></p>
+<p>inner height: <span id="inner-height"></span></p>
+<p>client width: <span id="client-width"></span></p>
+<p>client height: <span id="client-height"></span></p>
+
+<p>navigator.getBattery() = <span id="battery"></span></p>
+
+<div class="block-right">
+    <p>block right</p>
+</div>
+<p class="inline-right">inline right</p>
+<button id="summon">summon</button>
+
+<p>box x: <span id="box-x"></span></p>
+<p>box y: <span id="box-y"></span></p>
+<p>move x: <span id="move-x"></span></p>
+<p>move x: <span id="move-y"></span></p>
+<p>margin: <span id="margin"></span></p>
+
+
+<div id="modal">
+    <div id="modal-content">
+        <div id="header">
         </div>
+        <p>pp</p>
+        <button id="modal-close">close</button>
     </div>
+</div>
 
-    <div class="closs-s">
-        <div class="stick-area-s">
-            <div class="stick-1-s"></div>
-            <div class="stick-2-s"></div>
-        </div>
-    </div>
+<div class="titlebar">
+    <h1 class="subject">Battery Performance Test</h1>
+    <h1 class="date"><button class="btn btn-theme-light" id="theme-light">Light</button><button class="btn btn-theme-dark" id="theme-dark">Dark</button></h1>
+</div>
 
-    <div class="batsu">×</div>
-
-    <div class="switch-area">
-        <div class="switch-outer">
-            <div class="toggle-switch"></div>
-        </div>
-        <p>Display the advanced information</p>
-    </div>
-
-    <fieldset class="checkbox">
-        <legend>checkbox</legend>
-        <div>
-            <input type="checkbox" id="opt-info" name="opt-info"/>
-            <label for="opt-info">Display the advanced information</label>
-        </div>
-
-        <div>
-        <input type="checkbox" id="second" name="second"/>
-        <label for="second">Toggle time format to second</label>
-        </div>
-    </fieldset>
-
-    <button id="refresh">refresh</button>
-    <p>screen width: <span id="screen-width"></span></p>
-    <p>screen height: <span id="screen-height"></span></p>
-    <p>outer width: <span id="outer-width"></span></p>
-    <p>outer height: <span id="outer-height"></span></p>
-    <p>inner width: <span id="inner-width"></span></p>
-    <p>inner height: <span id="inner-height"></span></p>
-    <p>client width: <span id="client-width"></span></p>
-    <p>client height: <span id="client-height"></span></p>
-
-    <p>navigator.getBattery() = <span id="battery"></span></p>
-
-    <div class="block-right">
-        <p>block right</p>
-    </div>
-    <p class="inline-right">inline right</p>
-    <button id="summon">summon</button>
-
-    <p>box x: <span id="box-x"></span></p>
-    <p>box y: <span id="box-y"></span></p>
-    <p>move x: <span id="move-x"></span></p>
-    <p>move x: <span id="move-y"></span></p>
-    <p>margin: <span id="margin"></span></p>
-
-
-    <div id="modal">
-        <div id="modal-content">
-            <div id="header">
-            </div>
-            <p>pp</p>
-            <button id="modal-close">close</button>
-        </div>
-    </div>
-
-    <div class="titlebar">
-        <h1 class="subject">Battery Performance Test</h1>
-        <h1 class="date"><button class="btn btn-theme-light" id="theme-light">Light</button><button class="btn btn-theme-dark" id="theme-dark">Dark</button></h1>
-    </div>
-
-    <script src="./scripts.js"></script>
+<script src="./scripts.js"></script>
+<script src="./sidebar.js"></script>
 
 </body>
 </html>
