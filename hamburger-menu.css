@@ -7,7 +7,7 @@
     height: auto;
     position: fixed;
     /* ← fixedにして常に左上固定 */
-    top: 12px;
+    top: calc((var(--header-height) - (4px * 3 + 6px * 2)) / 2);
     left: calc(var(--header-right-left-padding) + 4px);
     cursor: pointer;
     z-index: 3;
