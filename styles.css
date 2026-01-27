@@ -85,6 +85,15 @@ p {
     padding: 7px 8px;
 }
 
+.table3 {
+    margin: 30px;
+    border-collapse: collapse;
+    & th, & td {
+        border: 1px white solid;
+        padding: 7px 8px;
+    }
+}
+
 .checkbox-wrap {
     font-size: 16px;
     width: 400px;
