@@ -26,15 +26,17 @@
 
             <nav class="menu">
                 <div class="menu-header">
-                    <a href="../home/" class="menu-title variable-tabindex level-2" tabindex="-1">任意のタイトル</a>
+                    <a href="../home/" class="menu-title variable-tabindex level-2" tabindex="-1">魑魅魍魎</a>
                 </div>
                 <ul class="sidebar" id="sidebar-urls"></ul>
             </nav>
         </div>
-        <a href="../home/" class="header-title level-2">任意のタイトル</a>
+        <a href="../home/" class="header-title level-2">魑魅魍魎</a>
     </div>
     <a href="../login/logout.php" class="btn btn--orange btn--cubic btn--shadow level-3">ログアウト</a>
 </header>
+
+<div class="container">
 
 <h1>魑魅魍魎</h1>
 <div>
@@ -46,6 +48,18 @@
 </div>
 <p>UserAgent: <span id="userAgent"></span><button id="copy-ua" style="font-size: 14px; margin: 0 0 0 4px; vertical-align: middle;">Copy</button></p>
 <p>window: <span id="window"></span></p>
+
+<button id="refresh">refresh</button>
+<p>screen width: <span id="screen-width"></span></p>
+<p>screen height: <span id="screen-height"></span></p>
+<p>outer width: <span id="outer-width"></span></p>
+<p>outer height: <span id="outer-height"></span></p>
+<p>inner width: <span id="inner-width"></span></p>
+<p>inner height: <span id="inner-height"></span></p>
+<p>client width: <span id="client-width"></span></p>
+<p>client height: <span id="client-height"></span></p>
+
+<p>navigator.getBattery() = <span id="battery"></span></p>
 
 <table class="table1">
     <tr>
@@ -104,7 +118,7 @@
     <div class="switch-outer">
         <div class="toggle-switch"></div>
     </div>
-    <p>Display the advanced information</p>
+    <p>Toggle switch</p>
 </div>
 
 <fieldset class="checkbox-wrap">
@@ -120,17 +134,6 @@
     </div>
 </fieldset>
 
-<button id="refresh">refresh</button>
-<p>screen width: <span id="screen-width"></span></p>
-<p>screen height: <span id="screen-height"></span></p>
-<p>outer width: <span id="outer-width"></span></p>
-<p>outer height: <span id="outer-height"></span></p>
-<p>inner width: <span id="inner-width"></span></p>
-<p>inner height: <span id="inner-height"></span></p>
-<p>client width: <span id="client-width"></span></p>
-<p>client height: <span id="client-height"></span></p>
-
-<p>navigator.getBattery() = <span id="battery"></span></p>
 
 
 <button id="summon">summon</button>
@@ -148,6 +151,8 @@
         <p>content</p>
         <button id="modal-close">close</button>
     </div>
+</div>
+
 </div>
 
 

@@ -1,22 +1,26 @@
 .switch-area {
-    position: relative;
-    margin: 10px 0 0 0;
-    width: auto;
+    margin: 20px 0 20px 10px;
+    width: max-content;
+    display: flex;
+    gap: 10px;
 }
 
 .switch-area > p {
-    position: absolute;
-    top: 0;
-    left: 56px;
     font-size: 16px;
-    vertical-align: middle;
+    margin: auto 0;
+}
+
+:root {
+    --switch-outer-width: 60px;
+    --switch-outer-height: 30px;
+    --toggle-switch-margin: 4px;
 }
 
 .switch-outer {
-    width: 46px;
-    height: 24px;
+    width: var(--switch-outer-width);
+    height: var(--switch-outer-height);
     background-color: lightgray;
-    border-radius: 30px;
+    border-radius: calc(var(--switch-outer-height) / 2);
     position: relative;
     cursor: pointer;
     transition: background-color .25s ease-in-out;
@@ -27,19 +31,19 @@
 }
 
 .toggle-switch {
-    width: 20px;
-    height: 20px;
+    width: calc(var(--switch-outer-height) - 2 * var(--toggle-switch-margin));
+    height: calc(var(--switch-outer-height) - 2 * var(--toggle-switch-margin));
     border-radius: 50%;
     position: absolute;
     background-color: white;
     top: 0;
     bottom: 0;
-    left: 2px;
-    margin: 2px 0;
-    box-shadow: 1px 1px 7px #B7B7B7, -1px -1px 4px #CECECE inset;
+    left: 0;
+    margin: var(--toggle-switch-margin);
+    box-shadow: 1px 1px 7px #2d2d2d88, -1px -1px 4px #c7c7c782 inset;
     transition: left .25s ease-in-out;
 }
 
 .toggle-switch.active {
-    left: 24px;
+    left: calc(var(--switch-outer-width) - var(--switch-outer-height));
 }
