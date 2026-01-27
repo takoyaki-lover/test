@@ -99,6 +99,7 @@ p {
     display: flex;
     gap: 10px;
 }
+
 .menu-icon-test {
     width: var(--hamburger-menu-width);
     height: auto;
