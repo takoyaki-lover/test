@@ -27,7 +27,7 @@ p {
 }
 
 .rainbow {
-    margin: 10px 0;
+    margin: 20px 0;
     width: 90%;
     height: 100px;
     background: linear-gradient(to right,#e60000,#f39800,#fff100,#009944,#0068b7,#1d2088,#920783) 0 / 200%;
@@ -94,6 +94,39 @@ p {
         padding: 7px 8px;
     }
 }
+
+.button-wrap {
+    display: flex;
+    gap: 10px;
+}
+.menu-icon-test {
+    width: var(--hamburger-menu-width);
+    height: auto;
+    /* ← fixedにして常に左上固定 */
+    top: calc((var(--header-height) - (4px * 3 + 6px * 2)) / 2);
+    left: calc(var(--header-right-left-padding) + 4px);
+    cursor: pointer;
+    z-index: 3;
+    display: inline-block;
+    padding: 0;
+    border: 0;
+    background: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.menu-icon-test .menu-stick {
+    display: block;
+    height: 4px;
+    background: #eee;
+    border-radius: 2px;
+    transition: transform 0.4s, opacity 0.4s, background-color 0.1s;
+}
+.menu-icon-test:hover .menu-stick {
+    background-color: #e0e0e0;
+}
+
+
 
 input[type="checkbox"] {
     width: 13px;

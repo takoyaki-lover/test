@@ -38,7 +38,7 @@
 
 <div class="container">
 
-<h1>魑魅魍魎</h1>
+<h1 class="title">魑魅魍魎</h1>
 <div>
     <select class="theme-select" id="theme" name="select" size="1">
         <option value="system" name="System">System</option>
@@ -47,15 +47,15 @@
     </select>
 </div>
 <p>UserAgent: <span id="userAgent"></span><button id="copy-ua" style="font-size: 14px; margin: 0 0 0 4px; vertical-align: middle;">Copy</button></p>
-<p>window: <span id="window"></span></p>
+<p>(max-width: 1000px): <span id="window"></span></p>
 
 <button id="refresh">refresh</button>
 <p>screen width: <span id="screen-width"></span></p>
 <p>screen height: <span id="screen-height"></span></p>
 <p>outer width: <span id="outer-width"></span></p>
 <p>outer height: <span id="outer-height"></span></p>
-<p>inner width: <span id="inner-width"></span></p>
-<p>inner height: <span id="inner-height"></span></p>
+<p style="font-weight: bold">inner width: <span id="inner-width"></span></p>
+<p style="font-weight: bold">inner height: <span id="inner-height"></span></p>
 <p>client width: <span id="client-width"></span></p>
 <p>client height: <span id="client-height"></span></p>
 
@@ -88,7 +88,36 @@
     </tr>
 </table>
 
-<input class="input" type="button" value="button">
+<div class="button-wrap">
+
+<button class="menu-icon-test" tabindex="0">
+    <span class="menu-stick"></span>
+    <span class="menu-stick"></span>
+    <span class="menu-stick"></span>
+</button>
+<button class="menu-icon-test" tabindex="0">
+    <div class="menu-stick"></div>
+    <div class="menu-stick"></div>
+    <div class="menu-stick"></div>
+</button>
+<button class="menu-icon-test" tabindex="0">
+    <a class="menu-stick"></a>
+    <a class="menu-stick"></a>
+    <a class="menu-stick"></a>
+</button>
+<a class="menu-icon-test" tabindex="0">
+    <span class="menu-stick"></span>
+    <span class="menu-stick"></span>
+    <span class="menu-stick"></span>
+</a>
+<a class="menu-icon-test" tabindex="0">
+    <div class="menu-stick"></div>
+    <div class="menu-stick"></div>
+    <div class="menu-stick"></div>
+</a>
+
+</div>
+
 <div class="rainbow"></div>
 <div class="rainbow-text">あいうえおかきくけこさしすせそたちつてと</div><br>
 <div class="rainbow-number">50000</div>
@@ -114,7 +143,7 @@
 
 <div class="batsu">×</div>
 
-<div class="switch-area">
+<div class="switch-wrap">
     <div class="switch-outer">
         <div class="toggle-switch"></div>
     </div>

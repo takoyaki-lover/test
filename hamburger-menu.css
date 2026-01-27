@@ -91,13 +91,14 @@
 .menu-header {
     background-color: #eee;
     height: var(--header-height);
-    align-content: center;
+    display: flex;
 }
 
 .menu-title {
     text-decoration: none;
     color: black;
-    margin: 0 0 0 calc(var(--header-right-left-padding) + var(--hamburger-menu-width) + var(--hamburger-header-title-gap));
+    display: block;
+    margin: auto 0 auto calc(var(--header-right-left-padding) + var(--hamburger-menu-width) + var(--hamburger-header-title-gap));
 }
 
 .menu-title:hover {

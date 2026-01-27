@@ -83,7 +83,7 @@ switch (localStorage.theme) {
 setInterval(() => {
     document.getElementById('userAgent').textContent = window.navigator.userAgent;
     document.getElementById('window').textContent = window.matchMedia('(max-width: 1000px)').matches;
-}, 1);
+}, 100);
 
 document.getElementById('copy-ua').addEventListener('click', function () {
     navigator.clipboard.writeText(document.getElementById('userAgent').textContent);
