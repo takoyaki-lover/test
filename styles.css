@@ -5,7 +5,8 @@ body {
 
 h1 {
     font-size: 32px;
-    margin: 0;
+    padding: 70px 0 0;
+    margin: 0 0 20px;
 }
 
 p {
@@ -17,7 +18,7 @@ p {
     width: 130px;
     height: 28px;
     font-size: 16px;
-    margin: 10px 0 0 0;
+    margin: 0;
 }
 
 .input {
@@ -66,167 +67,28 @@ p {
     100% {background-position-x: -200%;}
 }
 
-.batsu{
-    font-size: 150%;/*ボタンの大きさ*/
-    font-weight: bold;
-    border: 1px solid #999;
-    color: #999;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 100%;
-    width: 1.3em;
-    line-height: 1.3em;
-    margin: 10px 0 0 0;
-    cursor: pointer;
-    transition: .2s;
+.table1 {
+    margin: 30px;
+    border-collapse: collapse;
+    th, td {
+        border: 1px white solid;
+        padding: 7px 8px;
+    }
 }
 
-.batsu:hover{
-    background: #333;
-    border-color: #333;
-    color: #FFF;
+.table2 {
+    margin: 30px;
+    border-collapse: collapse;
+}
+.table2 th, .table2 td {
+    border: 1px white solid;
+    padding: 7px 8px;
 }
 
-.closs {
-    height: 16.2px;
-    width: 16.2px;
-    margin: 10px 0 0 0;
-}
-
-.closs:hover {
-    cursor: pointer;
-}
-
-.stick-area {
-    position: relative;
-    top: 7.1px;
-    right: 2.4px;
-}
-
-.stick-1, .stick-2{
-    position: absolute;
-    width: 21px;
-    height: 2px;
-    background-color: #777777;
-}
-
-.stick-1 {
-    transform: rotate(45deg);
-}
-
-.stick-2 {
-    transform: rotate(-45deg);
-}
-
-.closs:hover .stick-1, .closs:hover .stick-2{
-    background-color: #999999;
-}
-
-.closs:active .stick-1, .closs:active .stick-2{
-    background-color: #888888;
-}
-
-.closs-s {
-    height: 7px;
-    width: 7px;
-    margin: 10px 0 0 0;
-}
-
-.closs-s:hover {
-    cursor: pointer;
-}
-
-.stick-area-s {
-    position: relative;
-    top: 3px;
-    right: .5px;
-}
-
-.stick-1-s, .stick-2-s{
-    position: absolute;
-    width: 8px;
-    height: 1.2px;
-    background-color: #777777;
-}
-
-.stick-1-s {
-    transform: rotate(45deg);
-}
-
-.stick-2-s {
-    transform: rotate(-45deg);
-}
-
-.closs-s:hover .stick-1-s, .closs-s:hover .stick-2-s{
-    background-color: #999999;
-}
-
-.closs-s:active .stick-1-s, .closs-s:active .stick-2-s{
-    background-color: #888888;
-}
-
-.switch-area {
-    position: relative;
-    margin: 10px 0 0 0;
-    width: auto;
-}
-
-.switch-area > p {
-    position: absolute;
-    top: 0;
-    left: 56px;
-    font-size: 16px;
-    vertical-align: middle;
-}
-
-.switch-outer {
-    width: 46px;
-    height: 24px;
-    background-color: lightgray;
-    border-radius: 30px;
-    position: relative;
-    cursor: pointer;
-    transition: background-color .25s ease-in-out;
-}
-
-.switch-outer.active {
-    background-color: #51E373;
-}
-
-.toggle-switch {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    position: absolute;
-    background-color: white;
-    top: 0;
-    bottom: 0;
-    left: 2px;
-    margin: 2px 0;
-    box-shadow: 1px 1px 7px #B7B7B7, -1px -1px 4px #CECECE inset;
-    transition: left .25s ease-in-out;
-}
-
-.toggle-switch.active {
-    left: 24px;
-}
-
-.checkbox {
+.checkbox-wrap {
     font-size: 16px;
     width: 400px;
-    margin: 10px 0 0 0;
-}
-
-.block-right {
-    border: 1px solid;
-    width: 100px;
-    height: 40px;
-    margin: 0 0 0 auto;
-}
-
-.inline-right {
-    text-align: right;
+    margin: 10px 0 10px 0;
 }
 
 #modal {
@@ -243,7 +105,7 @@ p {
 
 #modal-content {
     background-color: #f4f4f4;
-    margin: 20px auto auto auto;
+    margin: 80px auto auto auto;
     width: 400px;
     box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2),0 7px 20px 0 rgba(0,0,0,0.17);
 }
@@ -259,22 +121,6 @@ p {
     font-size: 16px;
 }
 
-.subject {
-    text-align: left;  /* 文章を左寄せする(※) */
-    float: left;     /* 左端に寄せて、後続を右側へ回り込ませる */
-    flex: 4;
-}
-
-.date {
-    text-align: right; /* 文章を右寄せする */
-    flex: 1;
-}
-
-.titlebar {
-    background-color: #cc0000; /* 背景を赤色に */
-    color:white;               /* 文字を白色に */
-    font-weight:bold;          /* 太字にする */
-}
 
 /*
 * {

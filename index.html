@@ -3,7 +3,10 @@
 <head>
     <meta charset="utf-8">
     <title>魑魅魍魎</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=0.5">
     <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./cross.css">
+    <link rel="stylesheet" href="./toggle-switch.css">
     <link rel="stylesheet" href="./common.css">
     <link rel="stylesheet" href="./hamburger-menu.css">
 </head>
@@ -23,12 +26,12 @@
 
             <nav class="menu">
                 <div class="menu-header">
-                    <a href="../home/" class="menu-title variable-tabindex level-2" tabindex="-1">学生情報データベース</a>
+                    <a href="../home/" class="menu-title variable-tabindex level-2" tabindex="-1">任意のタイトル</a>
                 </div>
                 <ul class="sidebar" id="sidebar-urls"></ul>
             </nav>
         </div>
-        <a href="../home/" class="header-title level-2">学生情報データベース</a>
+        <a href="../home/" class="header-title level-2">任意のタイトル</a>
     </div>
     <a href="../login/logout.php" class="btn btn--orange btn--cubic btn--shadow level-3">ログアウト</a>
 </header>
@@ -43,6 +46,24 @@
 </div>
 <p>UserAgent: <span id="userAgent"></span><button id="copy-ua" style="font-size: 14px; margin: 0 0 0 4px; vertical-align: middle;">Copy</button></p>
 <p>window: <span id="window"></span></p>
+
+<table class="table1">
+    <tr>
+        <th>見出し1</th><th>見出し2</th><th>見出し3</th>
+    </tr>
+    <tr>
+        <td>セル1</td><td>セル2</td><td>セル3</td>
+    </tr>
+</table>
+
+<table class="table2">
+    <tr>
+        <th>見出し1</th><th>見出し2</th><th>見出し3</th>
+    </tr>
+    <tr>
+        <td>セル1</td><td>セル2</td><td>セル3</td>
+    </tr>
+</table>
 
 <input class="input" type="button" value="button">
 <div class="rainbow"></div>
@@ -77,9 +98,9 @@
     <p>Display the advanced information</p>
 </div>
 
-<fieldset class="checkbox">
+<fieldset class="checkbox-wrap">
     <legend>checkbox</legend>
-    <div>
+    <div class="checkbox-flex">
         <input type="checkbox" id="opt-info" name="opt-info"/>
         <label for="opt-info">Display the advanced information</label>
     </div>
@@ -102,12 +123,8 @@
 
 <p>navigator.getBattery() = <span id="battery"></span></p>
 
-<div class="block-right">
-    <p>block right</p>
-</div>
-<p class="inline-right">inline right</p>
-<button id="summon">summon</button>
 
+<button id="summon">summon</button>
 <p>box x: <span id="box-x"></span></p>
 <p>box y: <span id="box-y"></span></p>
 <p>move x: <span id="move-x"></span></p>
@@ -119,15 +136,11 @@
     <div id="modal-content">
         <div id="header">
         </div>
-        <p>pp</p>
+        <p>content</p>
         <button id="modal-close">close</button>
     </div>
 </div>
 
-<div class="titlebar">
-    <h1 class="subject">Battery Performance Test</h1>
-    <h1 class="date"><button class="btn btn-theme-light" id="theme-light">Light</button><button class="btn btn-theme-dark" id="theme-dark">Dark</button></h1>
-</div>
 
 <script src="./scripts.js"></script>
 <script src="./sidebar.js"></script>

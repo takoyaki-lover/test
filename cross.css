@@ -1,0 +1,99 @@
+.batsu{
+    font-size: 150%;/*ボタンの大きさ*/
+    font-weight: bold;
+    border: 1px solid #999;
+    color: #999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    width: 1.3em;
+    line-height: 1.3em;
+    margin: 10px 0 0 0;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.batsu:hover{
+    background: #333;
+    border-color: #333;
+    color: #FFF;
+}
+
+.closs {
+    height: 16.2px;
+    width: 16.2px;
+    margin: 10px 0 0 0;
+}
+
+.closs:hover {
+    cursor: pointer;
+}
+
+.stick-area {
+    position: relative;
+    top: 7.1px;
+    right: 2.4px;
+}
+
+.stick-1, .stick-2{
+    position: absolute;
+    width: 21px;
+    height: 2px;
+    background-color: #777777;
+}
+
+.stick-1 {
+    transform: rotate(45deg);
+}
+
+.stick-2 {
+    transform: rotate(-45deg);
+}
+
+.closs:hover .stick-1, .closs:hover .stick-2{
+    background-color: #999999;
+}
+
+.closs:active .stick-1, .closs:active .stick-2{
+    background-color: #888888;
+}
+
+.closs-s {
+    height: 7px;
+    width: 7px;
+    margin: 10px 0 0 0;
+}
+
+.closs-s:hover {
+    cursor: pointer;
+}
+
+.stick-area-s {
+    position: relative;
+    top: 3px;
+    right: .5px;
+}
+
+.stick-1-s, .stick-2-s{
+    position: absolute;
+    width: 8px;
+    height: 1.2px;
+    background-color: #777777;
+}
+
+.stick-1-s {
+    transform: rotate(45deg);
+}
+
+.stick-2-s {
+    transform: rotate(-45deg);
+}
+
+.closs-s:hover .stick-1-s, .closs-s:hover .stick-2-s{
+    background-color: #999999;
+}
+
+.closs-s:active .stick-1-s, .closs-s:active .stick-2-s{
+    background-color: #888888;
+}
