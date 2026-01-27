@@ -94,6 +94,12 @@ p {
     }
 }
 
+input[type="checkbox"] {
+    width: 13px;
+    height: 13px;
+    margin: 3px;
+}
+
 .checkbox-wrap {
     font-size: 16px;
     width: max-content;
