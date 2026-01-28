@@ -59,6 +59,14 @@ let urlList = [
         href: "test",
         title: "test"
     },
+    {
+        href: "test",
+        title: "test"
+    },
+    {
+        href: "test",
+        title: "test"
+    },
 ]
 
 // サイドバーに描画する関数
@@ -77,11 +85,12 @@ for (let i = 0; i < urlList.length; i++) {
 
 let overlay = document.getElementById("overlay");
 let menuToggle = document.getElementById("menu-toggle");
+let hamburgerBtn = document.getElementById("hamburger-btn");
 let variableTabIndex = document.querySelectorAll(".variable-tabindex");
 
 // クラスの切り替えでCSSを設定
 function toggleSidebar() {
-    let toggle = menuToggle.classList.toggle("opened");
+    let toggle = menuToggle.classList.toggle("opened"); // 追加したときtrue、削除したときfalseを返す
     if (toggle) {
         variableTabIndex.forEach(function (element) {
             element.tabIndex = 0;
@@ -99,6 +108,6 @@ overlay.addEventListener("click", function () {
 })
 
 // ハンバーガーメニューを押したとき
-menuToggle.addEventListener("click", function () {
+hamburgerBtn.addEventListener("click", function () {
     toggleSidebar();
 })

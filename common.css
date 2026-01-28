@@ -64,7 +64,7 @@ body {
         --header-height: 50px;
         --header-right-left-padding: 12px;
         --hamburger-menu-width: 30px;
-        --hamburger-header-title-gap: 16px;
+        --hamburger-header-title-gap: 18px;
         --side-menu-width: 260px;
         --side-menu-left-margin: 20px;
         --title-top-margin: 15px;
@@ -119,7 +119,7 @@ body {
         --header-height: 50px;
         --header-right-left-padding: 7.5px;
         --hamburger-menu-width: 30px;
-        --hamburger-header-title-gap: 12px;
+        --hamburger-header-title-gap: 18px;
         --side-menu-width: 225px;
         --side-menu-left-margin: 16px;
         --title-top-margin: 15px;

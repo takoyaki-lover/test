@@ -20,6 +20,22 @@
     gap: 6px;
 }
 
+.menu-icon-btn {
+    width: var(--hamburger-menu-width);
+    height: calc(4px * 3 + 6px * 2);
+    position: fixed;
+    /* ← fixedにして常に左上固定 */
+    top: calc((var(--header-height) - (4px * 3 + 6px * 2)) / 2);
+    left: calc(var(--header-right-left-padding) + 4px);
+    cursor: pointer;
+    z-index: 4;
+    display: inline-block;
+    padding: 0;
+    border: 0;
+    background: 0;
+    display: block;
+}
+
 .menu-icon .menu-stick {
     display: block;
     height: 4px;
@@ -28,7 +44,7 @@
     transition: transform 0.4s, opacity 0.4s, background-color 0.1s;
 }
 
-.menu-icon:hover .menu-stick {
+.menu-icon-btn:hover+.menu-icon .menu-stick {
     background-color: #e0e0e0;
 }
 
