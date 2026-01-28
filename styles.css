@@ -98,6 +98,7 @@ p {
 .button-wrap {
     display: flex;
     gap: 10px;
+    margin: 20px 0;
 }
 
 .menu-icon-test {
@@ -108,7 +109,6 @@ p {
     left: calc(var(--header-right-left-padding) + 4px);
     cursor: pointer;
     z-index: 3;
-    display: inline-block;
     padding: 0;
     border: 0;
     background: 0;
@@ -116,6 +116,7 @@ p {
     flex-direction: column;
     gap: 6px;
 }
+
 .menu-icon-test .menu-stick {
     display: block;
     height: 4px;
@@ -123,6 +124,7 @@ p {
     border-radius: 2px;
     transition: transform 0.4s, opacity 0.4s, background-color 0.1s;
 }
+
 .menu-icon-test:hover .menu-stick {
     background-color: #e0e0e0;
 }

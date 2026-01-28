@@ -111,3 +111,14 @@ overlay.addEventListener("click", function () {
 hamburgerBtn.addEventListener("click", function () {
     toggleSidebar();
 })
+
+let menuTest = document.querySelectorAll(".menu-icon-test");
+let count = 0;
+document.getElementById("count").textContent = count;
+
+menuTest.forEach(function (element) {
+    element.addEventListener("click", function () {
+        count++;
+        document.getElementById("count").textContent = count;
+    })
+})

@@ -11,7 +11,6 @@
     left: calc(var(--header-right-left-padding) + 4px);
     cursor: pointer;
     z-index: 3;
-    display: inline-block;
     padding: 0;
     border: 0;
     background: 0;
@@ -29,7 +28,6 @@
     left: calc(var(--header-right-left-padding) + 4px);
     cursor: pointer;
     z-index: 4;
-    display: inline-block;
     padding: 0;
     border: 0;
     background: 0;
