@@ -48,7 +48,7 @@ body {
     }
 
     a.btn--orange {
-        padding: 9px 11px 0;
+        padding: 0 11px;
         margin: 2px 0;
         border-bottom: 7px solid #b84c00;
     }
@@ -290,11 +290,23 @@ a.btn--orange {
     color: #fff;
     background-color: #eb6100;
     text-decoration: none;
+    display: flex;
+    align-items: center;
 }
 
 a.btn--orange:hover {
     background: #f56500;
 }
+a.btn--test {
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    color: white;
+    background: #eb6100;
+    text-decoration: none;
+    margin: 2px 0;
+}
+
 
 a.btn--shadow {
     -webkit-box-shadow: 0 3px 18px rgba(0, 0, 0, .3);
