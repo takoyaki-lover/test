@@ -28,7 +28,7 @@ p {
 
 .rainbow {
     margin: 20px 0;
-    width: 90%;
+    width: 100%;
     height: 100px;
     background: linear-gradient(to right,#e60000,#f39800,#fff100,#009944,#0068b7,#1d2088,#920783) 0 / 200%;
     animation: 5s rainbow-box linear infinite;
@@ -182,7 +182,8 @@ input[type="checkbox"] {
 }
 
 
-/*
-* {
+
+/* * {
     outline: .1px red solid;
-}
+} */
+
