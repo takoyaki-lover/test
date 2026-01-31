@@ -21,10 +21,11 @@
     color: #FFF;
 }
 
+
 .closs {
     height: 16.2px;
     width: 16.2px;
-    margin: 10px 0 0 0;
+    margin: 20px 0 0 0;
 }
 
 .closs:hover {
@@ -60,10 +61,11 @@
     background-color: #888888;
 }
 
+
 .closs-s {
     height: 7px;
     width: 7px;
-    margin: 10px 0 0 0;
+    margin: 20px 0 0 0;
 }
 
 .closs-s:hover {
@@ -112,7 +114,7 @@
     height: var(--x-btn-width);
 }
 
-.x-btn {
+.x-wrap .x-btn {
     width: var(--x-btn-width);
     height: var(--x-btn-width);
     cursor: pointer;
@@ -124,34 +126,135 @@
     z-index: 2;
 }
 
-.x-icon {
+.x-wrap .x-icon {
     width: var(--x-btn-width);
     height: var(--x-btn-width);
     position: absolute;
     z-index: 1;
 }
 
-.x-stick:nth-child(1) {
+.x-wrap .x-stick:nth-child(1) {
     width: calc(var(--x-btn-width) * sqrt(2) - var(--x-btn-stick-height));
     height: var(--x-btn-stick-height);
     transform: translate(calc(-1 * (sqrt(2) - 1) * (var(--x-btn-width) / 2 - var(--x-btn-stick-height))), calc((var(--x-btn-width) - var(--x-btn-stick-height)) / 2)) rotate(45deg);
 }
 
-.x-stick:nth-child(2) {
+.x-wrap .x-stick:nth-child(2) {
     width: calc(var(--x-btn-width) * sqrt(2) - var(--x-btn-stick-height));
     height: var(--x-btn-stick-height);
     transform: translate(calc(-1 * (sqrt(2) - 1) * (var(--x-btn-width) / 2 - var(--x-btn-stick-height))), calc((var(--x-btn-width) - var(--x-btn-stick-height)) / 2)) rotate(-45deg);
 }
 
-.x-icon .x-stick {
+.x-wrap .x-icon .x-stick {
     background-color: #777;
     position: absolute;
 }
 
-.x-btn:hover~ .x-icon .x-stick {
+.x-wrap .x-btn:hover~ .x-icon .x-stick {
     background-color: #888;
 }
 
-.x-btn:active~ .x-icon .x-stick {
+.x-wrap .x-btn:active~ .x-icon .x-stick {
     background-color: #999;
 }
+
+
+.x-wrap2 {
+    margin: 30px 0 0;
+    width: var(--x-btn-width);
+    height: var(--x-btn-width);
+}
+
+.x-wrap2 .x-btn {
+    width: var(--x-btn-width);
+    height: var(--x-btn-width);
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: none;
+    position: absolute;
+    z-index: 2;
+}
+
+.x-wrap2 .x-icon {
+    width: var(--x-btn-width);
+    height: var(--x-btn-width);
+    position: absolute;
+    z-index: 1;
+}
+
+.x-wrap2 .x-stick:nth-child(1) {
+    width: calc(var(--x-btn-width) * sqrt(2) - var(--x-btn-stick-height));
+    height: var(--x-btn-stick-height);
+    transform: translate(calc(-1 * (sqrt(2) - 1) * (var(--x-btn-width) / 2 - var(--x-btn-stick-height))), calc((var(--x-btn-width) - var(--x-btn-stick-height)) / 2)) rotate(45deg);
+}
+
+.x-wrap2 .x-stick:nth-child(2) {
+    width: calc(var(--x-btn-width) * sqrt(2) - var(--x-btn-stick-height));
+    height: var(--x-btn-stick-height);
+    transform: translate(calc(-1 * (sqrt(2) - 1) * (var(--x-btn-width) / 2 - var(--x-btn-stick-height))), calc((var(--x-btn-width) - var(--x-btn-stick-height)) / 2)) rotate(-45deg);
+}
+
+.x-wrap2 .x-icon .x-stick {
+    background-color: #777;
+    position: absolute;
+}
+
+.x-wrap2 .x-btn:hover~ .x-icon .x-stick {
+    background-color: #888;
+}
+
+/* .x-wrap2 .x-btn:active~ .x-icon .x-stick {
+    background-color: #999;
+} */
+
+.x-wrap3 {
+    margin: 30px 0 0;
+    width: var(--x-btn-width);
+    height: var(--x-btn-width);
+}
+
+.x-wrap3 .x-btn {
+    width: var(--x-btn-width);
+    height: var(--x-btn-width);
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: none;
+    position: absolute;
+    z-index: 2;
+}
+
+.x-wrap3 .x-icon {
+    width: var(--x-btn-width);
+    height: var(--x-btn-width);
+    position: absolute;
+    z-index: 1;
+}
+
+.x-wrap3 .x-stick:nth-child(1) {
+    width: calc(var(--x-btn-width) * sqrt(2) - var(--x-btn-stick-height));
+    height: var(--x-btn-stick-height);
+    transform: translate(calc(-1 * (sqrt(2) - 1) * (var(--x-btn-width) / 2 - var(--x-btn-stick-height))), calc((var(--x-btn-width) - var(--x-btn-stick-height)) / 2)) rotate(45deg);
+}
+
+.x-wrap3 .x-stick:nth-child(2) {
+    width: calc(var(--x-btn-width) * sqrt(2) - var(--x-btn-stick-height));
+    height: var(--x-btn-stick-height);
+    transform: translate(calc(-1 * (sqrt(2) - 1) * (var(--x-btn-width) / 2 - var(--x-btn-stick-height))), calc((var(--x-btn-width) - var(--x-btn-stick-height)) / 2)) rotate(-45deg);
+}
+
+.x-wrap3 .x-icon .x-stick {
+    background-color: #777;
+    position: absolute;
+}
+
+/* .x-wrap3 .x-btn:hover~ .x-icon .x-stick {
+    background-color: #888;
+}
+
+.x-wrap3 .x-btn:active~ .x-icon .x-stick {
+    background-color: #999;
+} */
