@@ -218,7 +218,7 @@
 .x-wrap3 .x-btn {
     width: var(--x-btn-width);
     height: var(--x-btn-width);
-    cursor: pointer;
+    /* cursor: pointer; */
     margin: 0;
     padding: 0;
     border: 0;
@@ -257,4 +257,5 @@
 
 .x-wrap3 .x-btn:active~ .x-icon .x-stick {
     background-color: #999;
+
 } */
