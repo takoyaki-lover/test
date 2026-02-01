@@ -132,7 +132,7 @@
     z-index: 1;
 }
 
-.x-wrap .x-btn:hover {
+.x-wrap .x-btn {
     cursor: pointer;
 }
 
@@ -179,6 +179,10 @@
     z-index: 2;
 }
 
+.x-wrap2 .x-btn:hover {
+    cursor: pointer;
+}
+
 .x-wrap2 .x-icon {
     width: var(--x-btn-width);
     height: var(--x-btn-width);
@@ -205,7 +209,6 @@
 
 .x-wrap2 .x-btn:hover~ .x-icon .x-stick {
     background-color: #888;
-    cursor: pointer;
 }
 
 .x-wrap2 .x-btn:active~ .x-icon .x-stick {
