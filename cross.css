@@ -264,3 +264,7 @@
 .x-wrap3 .x-btn:active~ .x-icon .x-stick {
     background-color: #999;
 } */
+
+* {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
