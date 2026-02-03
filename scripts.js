@@ -89,15 +89,6 @@ document.getElementById('copy-ua').addEventListener('click', function () {
     navigator.clipboard.writeText(document.getElementById('userAgent').textContent);
 });
 
-//スイッチの外枠とスイッチの要素を取得
-const switchOuter = document.querySelector(".switch-outer");
-const toggleSwitch = document.querySelector(".toggle-switch");
-
-//クリックでacitveクラスを追加/削除
-switchOuter.addEventListener("click", function () {
-    switchOuter.classList.toggle("active");
-    toggleSwitch.classList.toggle("active");
-});
 
 function test() {
     document.getElementById('box-x').textContent = headerElement.offsetLeft;

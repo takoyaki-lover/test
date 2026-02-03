@@ -132,24 +132,45 @@ p {
 
 
 input[type="checkbox"] {
-    width: 13px;
-    height: 13px;
-    margin: 3px;
+    width: 12px;
+    height: 12px;
+    margin: auto 0;
 }
 
-.checkbox-wrap {
+.checkbox-area {
     font-size: 16px;
     width: max-content;
-    margin: 20px 0 20px 10px;
+    margin: 30px 0;
     display: flex;
     gap: 10px;
     flex-direction: column;
 }
 
-.checkbox-flex {
+.checkbox-wrap {
     display: flex;
     gap: 5px;
 }
+
+input[type="radio"] {
+    width: 12px;
+    height: 12px;
+    margin: auto 0;
+}
+
+.radio-area {
+    font-size: 16px;
+    width: max-content;
+    margin: 30px 0;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.radio-wrap {
+    display: flex;
+    gap: 5px;
+}
+
 
 #modal {
     display: none;
@@ -186,4 +207,3 @@ input[type="checkbox"] {
 /* * {
     outline: .1px red solid;
 } */
-

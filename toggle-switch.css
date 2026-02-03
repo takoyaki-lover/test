@@ -1,5 +1,5 @@
 .switch-wrap {
-    margin: 20px 0 20px 10px;
+    margin: 30px 0;
     width: max-content;
     display: flex;
     gap: 10px;
@@ -44,6 +44,6 @@
     transition: left .25s ease-in-out;
 }
 
-.toggle-switch.active {
+.switch-outer.active .toggle-switch {
     left: calc(var(--switch-outer-width) - var(--switch-outer-height));
 }

@@ -192,26 +192,61 @@
 </div>
 
 <div class="switch-wrap">
+    <div class="switch-outer" id="sw1">
+        <div class="toggle-switch"></div>
+    </div>
+    <p>Toggle switch</p>
+</div>
+<div class="switch-wrap">
     <div class="switch-outer">
         <div class="toggle-switch"></div>
     </div>
     <p>Toggle switch</p>
 </div>
+<p class="test">fsdlkjfalsdj</p>
 
-<fieldset class="checkbox-wrap">
+<fieldset class="checkbox-area">
     <legend>checkbox</legend>
-    <div class="checkbox-flex">
-        <input type="checkbox" id="opt-info" name="opt-info"/>
-        <label for="opt-info">Checkbox example (flex box)</label>
+    <div class="checkbox-wrap">
+        <input type="checkbox" id="cb1" name="cb1"/>
+        <label for="cb1" class="input-label">Checkbox example (flex box)</label>
+    </div>
+    <div class="checkbox-wrap">
+        <input type="checkbox" id="cb2" name="cb2"/>
+        <label for="cb2" class="input-label">日本語の場合</label>
     </div>
 
     <div>
-    <input type="checkbox" id="second" name="second"/>
-    <label for="second">Checkbox example (normal box)</label>
+        <input type="checkbox" id="cb3" name="cb3"/>
+        <label for="cb3">Checkbox example (normal box)</label>
+    </div>
+    <div class="">
+        <input type="checkbox" id="cb4" name="cb4"/>
+        <label for="cb4">日本語の場合</label>
     </div>
 </fieldset>
 
+<fieldset class="radio-area">
+    <legend>radio</legend>
+    <div class="radio-wrap">
+        <input type="radio" id="radio1" name="r">
+        <label for="radio1">radio example (flex box)</label>
+    </div>
+    <div class="radio-wrap">
+        <input type="radio" id="radio2" name="r">
+        <label for="radio2">日本語の場合</label>
+    </div>
 
+    <div>
+        <input type="radio" id="radio3" name="r">
+        <label for="radio3">radio example (normal box)</label>
+    </div>
+    <div>
+        <input type="radio" id="radio4" name="r">
+        <label for="radio4">日本語の場合</label>
+    </div>
+
+</fieldset>
 
 <button id="summon">summon</button>
 <p>box x: <span id="box-x"></span></p>
@@ -235,6 +270,7 @@
 
 <script src="./scripts.js"></script>
 <script src="./sidebar.js"></script>
+<script src="./toggle-switch.js"></script>
 
 </body>
 </html>
