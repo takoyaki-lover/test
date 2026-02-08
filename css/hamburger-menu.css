@@ -1,0 +1,144 @@
+.hamburger-icon, .hamburger-btn {
+    width: var(--hamburger-menu-width);
+    height: calc(var(--hamburger-stick-height) * 3 + var(--hamburger-inner-gap) * 2);
+    margin: 0 0 0 var(--hamburger-left-margin);
+    padding: 0;
+    border: 0;
+    background: none;
+}
+
+.hamburger-icon {
+    display: flex;
+    flex-direction: column;
+    gap: var(--hamburger-inner-gap);
+    z-index: 3;
+    position: absolute;
+}
+
+.hamburger-btn {
+    display: block;
+    z-index: 4;
+}
+
+.hamburger-btn:hover {
+    cursor: pointer;
+}
+
+.hamburger-icon .menu-stick {
+    display: block;
+    width: var(--hamburger-menu-width);
+    height: var(--hamburger-stick-height);
+    background-color: #eee;
+    border-radius: 2px;
+    transition: transform 0.4s, opacity 0.4s, background-color 0.1s;
+}
+
+.hamburger-btn:hover+.hamburger-icon .menu-stick {
+    background-color: #e0e0e0;
+}
+
+/* ハンバーガーがXに変形 */
+.hamburger-icon.opened .menu-stick:nth-child(1) {
+    transform: translateY(calc(var(--hamburger-stick-height) + var(--hamburger-inner-gap))) rotate(45deg);
+}
+
+.hamburger-icon.opened .menu-stick:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-icon.opened .menu-stick:nth-child(3) {
+    transform: translateY(calc(-1 * (var(--hamburger-stick-height) + var(--hamburger-inner-gap)))) rotate(-45deg);
+}
+
+.hamburger-icon.opened .menu-stick {
+    background-color: #222;
+}
+
+.hamburger-btn:hover+.hamburger-icon.opened .menu-stick {
+    background-color: #444;
+}
+
+/* オーバーレイ背景 */
+.overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.4s;
+    z-index: 1;
+}
+
+.hamburger-icon.opened~.overlay {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* メニュー本体（左から出す） */
+.menu {
+    position: fixed;
+    top: 0;
+    left: calc(-1 * var(--side-menu-width) - 30px);
+    /* ← 初期位置を左へ */
+    width: var(--side-menu-width);
+    height: 100%;
+    background-color: #fff;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
+    transition: left 0.4s ease;
+    z-index: 2;
+}
+
+.hamburger-icon.opened~.menu {
+    left: 0;
+    /* ← 開いたときは左0へ */
+}
+
+.menu-header {
+    background-color: #eee;
+    height: var(--header-height);
+    display: flex;
+}
+
+.menu-title {
+    text-decoration: none;
+    color: #000;
+    display: block;
+    margin: auto 0 auto calc(var(--header-right-left-padding) + var(--hamburger-menu-width) + var(--hamburger-left-margin) + var(--hamburger-header-title-gap));
+    padding: var(--header-title-top-bottom-padding) 0;
+}
+
+.menu-title:hover, .menu-title:focus {
+    color: #333;
+    background-color: #ddd;
+}
+
+.menu-container {
+    overflow-x: auto;
+    height: calc(100% - var(--header-height));
+}
+
+.sidebar {
+    list-style: none;
+    margin: 20px 0 20px var(--side-menu-left-margin);
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.sidebar li {
+    display: flex;
+}
+
+.sidebar a {
+    text-decoration: none;
+    text-decoration-color: transparent;
+    color: #00e;
+    transition: text-decoration-color 0.1s;
+    padding: 1px 4px;
+}
+
+.sidebar a:hover, .sidebar a:focus {
+    text-decoration: underline;
+    text-decoration-color: currentColor;
+}

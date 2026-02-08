@@ -4,40 +4,37 @@
     <meta charset="utf-8">
     <title>魑魅魍魎</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=0.5">
-    <link rel="stylesheet" href="./styles.css">
-    <link rel="stylesheet" href="./cross.css">
-    <link rel="stylesheet" href="./toggle-switch.css">
-    <link rel="stylesheet" href="./common.css">
-    <link rel="stylesheet" href="./hamburger-menu.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/cross.css">
+    <link rel="stylesheet" href="css/toggle-switch.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/hamburger-menu.css">
 </head>
 
 <body class="theme">
 <header>
     <div class="header-left">
-        <div class="menu-wrapper">
 
-            <button class="menu-icon-btn" id="hamburger-btn" tabindex="0"></button>
-            <div class="menu-icon" id="menu-toggle">
-                <div class="menu-stick"></div>
-                <div class="menu-stick"></div>
-                <div class="menu-stick"></div>
-            </div>
-
-            <div class="overlay" id="overlay"></div>
-
-            <nav class="menu">
-                <div class="menu-header">
-                    <a href="../home/" class="menu-title variable-tabindex level-2" tabindex="-1">魑魅魍魎</a>
-                </div>
-                <div class="menu-container">
-                    <ul class="sidebar" id="sidebar-urls"></ul>
-                </div>
-            </nav>
+        <button class="hamburger-btn" id="hamburger-btn" tabindex="0"></button>
+        <div class="hamburger-icon" id="hamburger-icon">
+            <div class="menu-stick"></div>
+            <div class="menu-stick"></div>
+            <div class="menu-stick"></div>
         </div>
-        <a href="../home/" class="header-title level-2">魑魅魍魎</a>
+
+        <div class="overlay" id="overlay"></div>
+
+        <nav class="menu">
+            <div class="menu-header">
+                <a href="" class="menu-title variable-tabindex level-2" tabindex="-1">魑魅魍魎</a>
+            </div>
+            <div class="menu-container">
+                <ul class="sidebar" id="sidebar-urls"></ul>
+            </div>
+        </nav>
+        <a href="" class="header-title level-2">魑魅魍魎</a>
     </div>
-    <a href="../login/logout.php" class="btn btn--test btn--cubic btn--shadow level-3">ログアウト</a>
-    <a href="../login/logout.php" class="btn btn--orange btn--cubic btn--shadow level-3">ログアウト</a>
+    <a href="" class="btn btn--orange btn--cubic btn--shadow level-3">ログアウト</a>
 </header>
 
 <div class="container">
@@ -192,37 +189,39 @@
 </div>
 
 <div class="switch-wrap">
-    <div class="switch-outer" id="sw1">
-        <div class="toggle-switch"></div>
-    </div>
-    <p>Toggle switch</p>
-</div>
-<div class="switch-wrap">
+    <button class="switch-btn" id="sw1" tabindex="0"></button>
     <div class="switch-outer">
         <div class="toggle-switch"></div>
     </div>
-    <p>Toggle switch</p>
+    <label for="sw1" class="switch-label">Style outline check switch</label>
 </div>
-<p class="test">fsdlkjfalsdj</p>
+
+<div class="switch-wrap">
+    <button class="switch-btn" id="sw2" tabindex="0"></button>
+    <div class="switch-outer">
+        <div class="toggle-switch"></div>
+    </div>
+    <label for="sw2" class="switch-label">Toggle switch</label>
+</div>
 
 <fieldset class="checkbox-area">
     <legend>checkbox</legend>
     <div class="checkbox-wrap">
         <input type="checkbox" id="cb1" name="cb1"/>
-        <label for="cb1" class="input-label">Checkbox example (flex box)</label>
+        <label for="cb1" class="input-label">Checkbox example (flex checkbox)</label>
     </div>
     <div class="checkbox-wrap">
         <input type="checkbox" id="cb2" name="cb2"/>
-        <label for="cb2" class="input-label">日本語の場合</label>
+        <label for="cb2" class="input-label">日本語の場合　フレックス</label>
     </div>
 
     <div>
         <input type="checkbox" id="cb3" name="cb3"/>
-        <label for="cb3">Checkbox example (normal box)</label>
+        <label for="cb3">Checkbox example (normal chechbox)</label>
     </div>
     <div class="">
         <input type="checkbox" id="cb4" name="cb4"/>
-        <label for="cb4">日本語の場合</label>
+        <label for="cb4">日本語の場合　ノーマル</label>
     </div>
 </fieldset>
 
@@ -230,20 +229,31 @@
     <legend>radio</legend>
     <div class="radio-wrap">
         <input type="radio" id="radio1" name="r">
-        <label for="radio1">radio example (flex box)</label>
+        <label for="radio1" class="radio-label"><span>radio example (flex radio)</span></label>
     </div>
     <div class="radio-wrap">
         <input type="radio" id="radio2" name="r">
-        <label for="radio2">日本語の場合</label>
+        <label for="radio2" class="radio-label"><span>The case of English and long sentence to check how behaviors in HTML. So I must think long sentence, but it is so difficult for me because I'm not English speaker.</span></label>
     </div>
-
-    <div>
+    <div class="radio-wrap">
         <input type="radio" id="radio3" name="r">
-        <label for="radio3">radio example (normal box)</label>
+        <label for="radio3" class="radio-label"><span>日本語の場合　短い文章の場合　フレックス</span></label>
     </div>
-    <div>
+    <div class="radio-wrap">
         <input type="radio" id="radio4" name="r">
-        <label for="radio4">日本語の場合</label>
+        <label for="radio4" class="radio-label"><span>日本語の場合　例えば文章が長く、改行が必要な場合、どうなるのか。それを調べるために、なるべく多くの文字数を稼がなくてはならない。フレックス</span></label>
+    </div>
+    <div class="radio-wrap">
+        <input type="radio" id="radio5" name="r">
+        <label for="radio5" class="radio-label"><span>日本語の場合　例えば文章が長く、改行が必要な場合、どうなるのか。それを調べるために、なるべく多くの文字数を稼がなくてはならない。しかも、前のものよりも長くする必要があるため、その工程は困難を極めるだろうか。フレックス</span></label>
+    </div>
+    <div class="">
+        <input type="radio" id="radio6" name="r">
+        <label for="radio6">normal radio button (normal radio)</label>
+    </div>
+    <div class="">
+        <input type="radio" id="radio7" name="r">
+        <label for="radio7">日本語の場合　ノーマル</label>
     </div>
 
 </fieldset>
@@ -268,9 +278,9 @@
 </div>
 
 
-<script src="./scripts.js"></script>
-<script src="./sidebar.js"></script>
-<script src="./toggle-switch.js"></script>
+<script src="js/scripts.js"></script>
+<script src="js/sidebar.js"></script>
+<script src="js/toggle-switch.js"></script>
 
 </body>
 </html>

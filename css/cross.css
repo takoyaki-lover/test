@@ -1,0 +1,266 @@
+.batsu{
+    font-size: 150%;/*ボタンの大きさ*/
+    font-weight: bold;
+    border: 1px solid #999;
+    color: #999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    width: 1.3em;
+    line-height: 1.3em;
+    margin: 10px 0 0 0;
+    cursor: pointer;
+    user-select: none;
+    transition: .2s;
+}
+
+.batsu:hover{
+    background: #333;
+    border-color: #333;
+    color: #FFF;
+}
+
+
+.closs {
+    height: 16.2px;
+    width: 16.2px;
+    margin: 20px 0 0 0;
+}
+
+.closs:hover {
+    cursor: pointer;
+}
+
+.stick-area {
+    position: relative;
+    top: 7.1px;
+    right: 2.4px;
+}
+
+.stick-1, .stick-2{
+    position: absolute;
+    width: 21px;
+    height: 2px;
+    background-color: #777777;
+}
+
+.stick-1 {
+    transform: rotate(45deg);
+}
+
+.stick-2 {
+    transform: rotate(-45deg);
+}
+
+.closs:hover .stick-1, .closs:hover .stick-2{
+    background-color: #999999;
+}
+
+.closs:active .stick-1, .closs:active .stick-2{
+    background-color: #888888;
+}
+
+
+.closs-s {
+    height: 7px;
+    width: 7px;
+    margin: 20px 0 0 0;
+}
+
+.closs-s:hover {
+    cursor: pointer;
+}
+
+.stick-area-s {
+    position: relative;
+    top: 3px;
+    right: .5px;
+}
+
+.stick-1-s, .stick-2-s{
+    position: absolute;
+    width: 8px;
+    height: 1.2px;
+    background-color: #777777;
+}
+
+.stick-1-s {
+    transform: rotate(45deg);
+}
+
+.stick-2-s {
+    transform: rotate(-45deg);
+}
+
+.closs-s:hover .stick-1-s, .closs-s:hover .stick-2-s{
+    background-color: #999999;
+}
+
+.closs-s:active .stick-1-s, .closs-s:active .stick-2-s{
+    background-color: #888888;
+}
+
+
+
+:root {
+    --x-btn-width: 20px;
+    --x-btn-stick-height: 2px;
+}
+
+.x-wrap {
+    margin: 30px 0 0;
+    width: var(--x-btn-width);
+    height: var(--x-btn-width);
+}
+
+.x-wrap .x-btn {
+    width: var(--x-btn-width);
+    height: var(--x-btn-width);
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: none;
+    position: absolute;
+    z-index: 2;
+}
+
+.x-wrap .x-icon {
+    width: var(--x-btn-width);
+    height: var(--x-btn-width);
+    position: absolute;
+    z-index: 1;
+}
+
+.x-wrap .x-btn {
+    cursor: pointer;
+}
+
+.x-wrap .x-stick:nth-child(1) {
+    width: calc(var(--x-btn-width) * sqrt(2) - var(--x-btn-stick-height));
+    height: var(--x-btn-stick-height);
+    transform: translate(calc(-1 * (sqrt(2) - 1) * (var(--x-btn-width) / 2 - var(--x-btn-stick-height))), calc((var(--x-btn-width) - var(--x-btn-stick-height)) / 2)) rotate(45deg);
+}
+
+.x-wrap .x-stick:nth-child(2) {
+    width: calc(var(--x-btn-width) * sqrt(2) - var(--x-btn-stick-height));
+    height: var(--x-btn-stick-height);
+    transform: translate(calc(-1 * (sqrt(2) - 1) * (var(--x-btn-width) / 2 - var(--x-btn-stick-height))), calc((var(--x-btn-width) - var(--x-btn-stick-height)) / 2)) rotate(-45deg);
+}
+
+.x-wrap .x-icon .x-stick {
+    background-color: #777;
+    position: absolute;
+}
+
+.x-wrap .x-btn:hover~ .x-icon .x-stick {
+    background-color: #888;
+}
+
+.x-wrap .x-btn:active~ .x-icon .x-stick {
+    background-color: #999;
+}
+
+
+.x-wrap2 {
+    margin: 30px 0 0;
+    width: var(--x-btn-width);
+    height: var(--x-btn-width);
+}
+
+.x-wrap2 .x-btn {
+    width: var(--x-btn-width);
+    height: var(--x-btn-width);
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: none;
+    position: absolute;
+    z-index: 2;
+}
+
+.x-wrap2 .x-btn:hover {
+    cursor: pointer;
+}
+
+.x-wrap2 .x-icon {
+    width: var(--x-btn-width);
+    height: var(--x-btn-width);
+    position: absolute;
+    z-index: 1;
+}
+
+.x-wrap2 .x-stick:nth-child(1) {
+    width: calc(var(--x-btn-width) * sqrt(2) - var(--x-btn-stick-height));
+    height: var(--x-btn-stick-height);
+    transform: translate(calc(-1 * (sqrt(2) - 1) * (var(--x-btn-width) / 2 - var(--x-btn-stick-height))), calc((var(--x-btn-width) - var(--x-btn-stick-height)) / 2)) rotate(45deg);
+}
+
+.x-wrap2 .x-stick:nth-child(2) {
+    width: calc(var(--x-btn-width) * sqrt(2) - var(--x-btn-stick-height));
+    height: var(--x-btn-stick-height);
+    transform: translate(calc(-1 * (sqrt(2) - 1) * (var(--x-btn-width) / 2 - var(--x-btn-stick-height))), calc((var(--x-btn-width) - var(--x-btn-stick-height)) / 2)) rotate(-45deg);
+}
+
+.x-wrap2 .x-icon .x-stick {
+    background-color: #777;
+    position: absolute;
+}
+
+.x-wrap2 .x-btn:hover~ .x-icon .x-stick {
+    background-color: #888;
+}
+
+.x-wrap2 .x-btn:active~ .x-icon .x-stick {
+    background-color: #999;
+}
+
+.x-wrap3 {
+    margin: 30px 0 0;
+    width: var(--x-btn-width);
+    height: var(--x-btn-width);
+}
+
+.x-wrap3 .x-btn {
+    width: var(--x-btn-width);
+    height: var(--x-btn-width);
+    /* cursor: pointer; */
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: none;
+    position: absolute;
+    z-index: 2;
+}
+
+.x-wrap3 .x-icon {
+    width: var(--x-btn-width);
+    height: var(--x-btn-width);
+    position: absolute;
+    z-index: 1;
+}
+
+.x-wrap3 .x-stick:nth-child(1) {
+    width: calc(var(--x-btn-width) * sqrt(2) - var(--x-btn-stick-height));
+    height: var(--x-btn-stick-height);
+    transform: translate(calc(-1 * (sqrt(2) - 1) * (var(--x-btn-width) / 2 - var(--x-btn-stick-height))), calc((var(--x-btn-width) - var(--x-btn-stick-height)) / 2)) rotate(45deg);
+}
+
+.x-wrap3 .x-stick:nth-child(2) {
+    width: calc(var(--x-btn-width) * sqrt(2) - var(--x-btn-stick-height));
+    height: var(--x-btn-stick-height);
+    transform: translate(calc(-1 * (sqrt(2) - 1) * (var(--x-btn-width) / 2 - var(--x-btn-stick-height))), calc((var(--x-btn-width) - var(--x-btn-stick-height)) / 2)) rotate(-45deg);
+}
+
+.x-wrap3 .x-icon .x-stick {
+    background-color: #777;
+    position: absolute;
+}
+
+/* .x-wrap3 .x-btn:hover~ .x-icon .x-stick {
+    background-color: #888;
+}
+
+.x-wrap3 .x-btn:active~ .x-icon .x-stick {
+    background-color: #999;
+} */

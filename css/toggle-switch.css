@@ -1,0 +1,65 @@
+:root {
+    --switch-outer-width: 60px;
+    --switch-outer-height: 30px;
+    --toggle-switch-margin: 4px;
+}
+
+.switch-wrap {
+    margin: 30px 0;
+    width: max-content;
+    display: flex;
+    gap: 10px;
+}
+
+.switch-wrap .switch-label {
+    font-size: 16px;
+    margin: auto 0;
+}
+
+.switch-btn {
+    width: var(--switch-outer-width);
+    height: var(--switch-outer-height);
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-radius: calc(var(--switch-outer-height) / 2);
+    background: none;
+    position: relative;
+    z-index: 3;
+}
+
+.switch-btn:hover, .switch-label {
+    cursor: pointer;
+}
+
+.switch-outer {
+    width: var(--switch-outer-width);
+    height: var(--switch-outer-height);
+    background-color: lightgray;
+    border-radius: calc(var(--switch-outer-height) / 2);
+    position: absolute;
+    transition: background-color .25s ease-in-out;
+    z-index: 2;
+}
+
+.switch-btn.active+ .switch-outer {
+    background-color: #51E373;
+}
+
+.toggle-switch {
+    width: calc(var(--switch-outer-height) - 2 * var(--toggle-switch-margin));
+    height: calc(var(--switch-outer-height) - 2 * var(--toggle-switch-margin));
+    border-radius: 50%;
+    position: absolute;
+    background-color: white;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: var(--toggle-switch-margin);
+    box-shadow: 1px 1px 7px #2d2d2d88, -1px -1px 4px #c7c7c782 inset;
+    transition: left .25s ease-in-out;
+}
+
+.switch-btn.active+ .switch-outer .toggle-switch {
+    left: calc(var(--switch-outer-width) - var(--switch-outer-height));
+}
