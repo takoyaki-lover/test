@@ -1,8 +1,8 @@
 // サイドバー
-let sidebar = document.getElementById("sidebar-urls");
+const sidebar = document.getElementById("sidebar-urls");
 
 // サイドバーに表示させるもの 配列の上から順番に表示
-let urlList = [
+const urlList = [
     {
         href: "test",
         title: "test"
@@ -110,19 +110,19 @@ function renderSidebar(href, title) {
 
 // urlListの要素数だけ描画させる
 for (let i = 0; i < urlList.length; i++) {
-    let url = urlList[i];
+    const url = urlList[i];
     renderSidebar(url.href, url.title);
 }
 
 
-let overlay = document.getElementById("overlay");
-let menuToggle = document.getElementById("hamburger-icon");
-let hamburgerBtn = document.getElementById("hamburger-btn");
-let variableTabIndex = document.querySelectorAll(".variable-tabindex");
+const overlay = document.getElementById("overlay");
+// const menuToggle = document.getElementById("hamburger-icon");
+const hamburgerBtn = document.getElementById("hamburger-btn");
+const variableTabIndex = document.querySelectorAll(".variable-tabindex");
 
 // クラスの切り替えでCSSを設定
 function toggleSidebar() {
-    let toggle = menuToggle.classList.toggle("opened"); // 追加したときtrue、削除したときfalseを返す
+    const toggle = hamburgerBtn.classList.toggle("opened"); // 追加したときtrue、削除したときfalseを返す
     if (toggle) {
         variableTabIndex.forEach(function (element) {
             element.tabIndex = 0;
@@ -144,7 +144,8 @@ hamburgerBtn.addEventListener("click", function () {
     toggleSidebar();
 })
 
-let menuTest = document.querySelectorAll(".menu-icon-test");
+
+const menuTest = document.querySelectorAll(".menu-icon-test");
 let count = 0;
 document.getElementById("count").textContent = count;
 
