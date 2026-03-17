@@ -114,7 +114,7 @@ p {
     z-index: 3;
     padding: 0;
     border: 0;
-    background: none;
+    background: 0;
     display: flex;
     flex-direction: column;
     gap: 6px;
