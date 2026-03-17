@@ -5,26 +5,30 @@
     padding: 0;
     border: 0;
     background: none;
-}
-
-.hamburger-icon {
     display: flex;
     flex-direction: column;
     gap: var(--hamburger-inner-gap);
     z-index: 3;
-    position: absolute;
+}
+
+.hamburger-icon {
+    /* display: flex;
+    flex-direction: column;
+    gap: var(--hamburger-inner-gap);
+    z-index: 3;
+    position: absolute; */
 }
 
 .hamburger-btn {
-    display: block;
-    z-index: 4;
+    /* display: block;
+    z-index: 4; */
 }
 
 .hamburger-btn:hover {
     cursor: pointer;
 }
 
-.hamburger-icon .menu-stick {
+.menu-stick {
     display: block;
     width: var(--hamburger-menu-width);
     height: var(--hamburger-stick-height);
@@ -33,28 +37,28 @@
     transition: transform 0.4s, opacity 0.4s, background-color 0.1s;
 }
 
-.hamburger-btn:hover+.hamburger-icon .menu-stick {
-    background-color: #e0e0e0;
+.hamburger-btn:hover .menu-stick {
+    background-color: #bbb;
 }
 
 /* ハンバーガーがXに変形 */
-.hamburger-icon.opened .menu-stick:nth-child(1) {
+.hamburger-btn.opened .menu-stick:nth-child(1) {
     transform: translateY(calc(var(--hamburger-stick-height) + var(--hamburger-inner-gap))) rotate(45deg);
 }
 
-.hamburger-icon.opened .menu-stick:nth-child(2) {
+.hamburger-btn.opened .menu-stick:nth-child(2) {
     opacity: 0;
 }
 
-.hamburger-icon.opened .menu-stick:nth-child(3) {
+.hamburger-btn.opened .menu-stick:nth-child(3) {
     transform: translateY(calc(-1 * (var(--hamburger-stick-height) + var(--hamburger-inner-gap)))) rotate(-45deg);
 }
 
-.hamburger-icon.opened .menu-stick {
+.hamburger-btn.opened .menu-stick {
     background-color: #222;
 }
 
-.hamburger-btn:hover+.hamburger-icon.opened .menu-stick {
+.hamburger-btn.opened:hover .menu-stick {
     background-color: #444;
 }
 
@@ -69,7 +73,7 @@
     z-index: 1;
 }
 
-.hamburger-icon.opened~.overlay {
+.hamburger-btn.opened~.overlay {
     opacity: 1;
     pointer-events: auto;
 }
@@ -88,7 +92,7 @@
     z-index: 2;
 }
 
-.hamburger-icon.opened~.menu {
+.hamburger-btn.opened~.menu {
     left: 0;
     /* ← 開いたときは左0へ */
 }
